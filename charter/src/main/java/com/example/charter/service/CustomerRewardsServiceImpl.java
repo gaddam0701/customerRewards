@@ -67,6 +67,7 @@ public class CustomerRewardsServiceImpl implements CustomerRewardsService<Custom
 			}
 			
 			for (String month : monthTotal.keySet()) {
+				customerRewards.setCustId(custId);
 				customerRewards.setMonth(month);
 				customerRewards.setTotal(monthTotal.get(month));
 				customerRewardsList.add(customerRewards);
